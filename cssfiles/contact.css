@@ -1,0 +1,265 @@
+.contatsusdiv {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 35px;
+    padding: 30px;
+}
+.lftsession {
+    display: flex;
+    flex-direction:column;
+}
+.rightsession {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+input {
+    height: 35px;
+    border-radius: 50px;
+    padding-left: 20px;
+    border: solid 1px black;
+}
+input:focus {
+    border: ;
+}
+textarea {
+    border-radius: 10px;
+    height: 110px;
+    border: solid 1px black;
+    padding-left: 20px;
+    padding-top: 18px;
+}
+.contactusicon {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.submit-button {
+    background: linear-gradient(15deg, rgb(19, 78, 112),  #bc1515);
+    color: white;
+    width: 130px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.submit-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-45deg);
+    transition: all 0.5s ease;
+}
+.submit-button:hover::before {
+    left: 100%;
+}.submit-button:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+.submit-button:active {
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+.calling {
+    display: inline-flex;
+    width: 170px;
+    height: 35px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    fill: black;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+.mailing {
+    display: inline-flex;
+    text-decoration: none;
+    border: solid 1px black;
+    border-radius: 5px;
+    width: 170px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    fill: black;
+   
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-play-state: paused;
+}
+.slide-from-bottom {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Start position below */
+    animation: slideFromBottom 1s ease-out forwards; /* Smooth slide and fade-in effect */
+    animation-play-state: paused; /* Paused until triggered by JavaScript */
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-play-state: paused;
+}
+.slide-in-right {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%); /* Start off-screen */
+    animation: slideInRight 1.5s ease-out forwards; /* Smooth slide-in effect */
+    animation-play-state: paused; /* Paused until triggered by JS */
+}
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100%); /* Start from the left */
+    animation: slideInLeft 1.5s ease-out forwards;
+    animation-play-state: paused;
+}
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Preloader content styles */
+.image-container img {
+    width: 200px;
+    height: auto;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInScale 2s ease-in-out forwards;
+}
+
+.text-container {
+    margin-top: -15px;
+    font-size: 18px;
+    font-weight: 700;
+    background: linear-gradient(1deg, red, #043D5D, #043D5D, red);
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s ease-in-out 1s forwards;
+}
+.hidden {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+/* Keyframe animations */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Content Animation */
+@keyframes slideFromBottom {
+    from {
+        opacity: 0;            /* Fully transparent */
+        transform: translateY(100%); /* Start below the final position */
+    }
+    to {
+        opacity: 1;            /* Fully visible */
+        transform: translateY(0); /* Original position */
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(10%); /* Start off the screen to the right */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End at the original position */
+    }
+}

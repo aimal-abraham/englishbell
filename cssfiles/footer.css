@@ -1,0 +1,182 @@
+footer {
+    display: flex;
+    height: 60px;
+    background-color: #043D5D;
+    align-items: center;
+    justify-content: center;
+    border-top: 0.5px solid white;
+}
+.footercls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footercont {
+    font-size: 106px;
+    font-weight: 400;
+}
+footer a {
+    cursor: pointer ;
+    color: white;
+    transition: all 0.3s ease;
+
+}
+footer a:hover {
+    color: white;
+    font-size: 14px;
+}
+.prefooterr {
+    display: flex;
+    flex-direction: row;
+    background-color: #134e70; 
+    height: 200px;
+    flex: 1;
+    padding: 15px;
+    gap: 10px;
+}
+.left-pre {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+.middle-pre {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.testt {
+    display: flex;
+}
+.right-pre {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.firstroww {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 50px;
+    margin-top: 15px;
+}
+.secondroww {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.prefooterimg {
+    width: 160px;
+    height: auto;
+    background: none;
+}
+.left-pre-second {
+    display: flex;
+    flex: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: -35px;
+
+
+}
+.left-pre-second-one {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    width: 200px;
+    align-items: center;
+    margin-left: 20px;
+    padding-left: 20px;
+
+}
+.motive {
+    color: white;
+    font-size: 11px;
+    font-weight: 450;
+}
+.bottomly {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80px;
+    margin-top: 15px;
+}
+.firstbottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prefooter-icon {
+    fill: white;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+}
+.prefooter-icon:hover {
+    background-color: #043D5D;
+    fill: white;
+    
+}
+.secondbottom {
+    display: flex;
+    gap: 10px;
+    margin-top: -10px;
+}
+.phnumber {
+    margin-top: -10px;
+}
+.support-icon {
+    fill: white;
+}
+@media (max-width: 768px) {
+    .prefooterr {
+        flex-direction: column;
+        justify-content: flex-start;
+
+        height: auto;
+    }
+    .prefooterimg{
+        justify-content: flex-start;
+        width: 200px;
+        height: auto;
+    }
+    .left-pre, .middle-pre, .right-pre {
+        flex: none;
+        width: 100%;
+        margin-bottom: 10px;
+        align-self: flex-start;
+    }
+    .left-pre img {
+        max-width: 180px;
+        height: auto;
+    }
+    .motive {
+        font-size: 12px;
+        padding: 10px 20px;
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    .footercont {
+        font-size: 10px;
+        text-align: center;
+    }
+    .prefooterr {
+        gap: 5px;
+    }
+    .socialicon {
+        width: 16px;
+        height: 16px;
+        margin: 3px;
+    }
+}

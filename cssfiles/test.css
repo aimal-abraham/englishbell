@@ -1,0 +1,76 @@
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 100px;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(113, 117, 128);
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-top: 1px solid rgb(167, 169, 176);
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    transition: transform 0.5s ease;
+}
+
+.hidden {
+    transform: translateY(-100%);
+}
+
+.navigation-links {
+    font-size: 16px;
+    color: rgb(113, 117, 128);
+    font-weight: 700;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.navigation-links:hover {
+    cursor: pointer;
+    color: #043D5D;
+}
+
+@media (max-width: 768px) {
+    .section2, nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+.open {
+    transform: translateY(0%);
+}

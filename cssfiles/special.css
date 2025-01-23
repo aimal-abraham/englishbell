@@ -1,0 +1,178 @@
+/* Flex container for 3x3 grid */
+.specialheadline {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 40px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(5deg, red, #043D5D, white ); 
+    -webkit-background-clip: text; 
+    color: transparent;
+    text-decoration: underline 2px;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 8px;
+}
+.specialheadline::after { 
+    content: ''; 
+    position: relative;
+    left: 0; 
+    bottom: -15px; /* Adjust the position of the underline */ 
+    width: 100%; 
+    height: 1px; /* Adjust the thickness of the underline */ 
+    background: linear-gradient(90deg, red, rgb(4, 61, 93), white);
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between cards */
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f9f9f9;
+    perspective: 1000px;
+}
+
+/* Card styles */
+.card-oddone {
+    width: 250px;
+    height: 210px;
+    border: 1px solid #ddd;
+    background: #fff;
+    animation: floatEffect 5s infinite alternate ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: rgb(255, 73, 69);
+    display: flex;
+    flex-direction: column;
+    transform: rotateX(1deg) rotateY(1deg) translateZ(3px);
+    transform-style: preserve-3d;
+}
+.card-evenone {
+    width: 250px;
+    height: 210px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    animation: floatEffect 5s infinite alternate ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #043D5D;
+    display: flex;
+    flex-direction: column;
+    transform: rotateX(1deg) rotateY(1deg) translateZ(3px);
+    transform-style: preserve-3d;
+}
+
+.speciality-icon {
+    width: 80px;
+    height: auto;
+    background: none;
+}
+
+/* Top row with icon and heading */
+.card-row.top-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+/* Icon styles */
+.icon {
+    flex: 0 0 40px; /* Fixed width for the icon */
+    font-size: 24px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+/* Heading styles */
+.heading {
+    flex: 1; /* Take remaining space */
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Explanation row */
+.card-row.explanation {
+    font-size: 14px;
+    line-height: 1.5;
+    color: white;
+}
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100%); /* Start from the left */
+    animation: slideInLeft 1.5s ease-out forwards;
+    animation-play-state: paused;
+}
+.slide-in-right {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%); /* Start off-screen */
+    animation: slideInRight 1.5s ease-out forwards; /* Smooth slide-in effect */
+    animation-play-state: paused; /* Paused until triggered by JS */
+}
+.scale-up {
+    opacity: 0;
+    transform: scale(5px); /* Start smaller */
+    animation: scaleUp 1.5s ease-out forwards;
+    animation-play-state: paused;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .specialheadline{
+        display: inline-flex;
+        font-size: 39px;
+        padding: 18px;
+    }
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%; /* Full width for smaller screens */
+        max-width: 300px; /* Optional: prevent cards from stretching too much */
+    }
+}
+@keyframes floatEffect {
+    0% {
+        transform: rotateX(1deg) rotateY(1deg) translateZ(3px);
+    }
+    50% {
+        transform: rotateX(-1deg) rotateY(-1deg) translateZ(3px);
+    }
+    100% {
+        transform: rotateX(1deg) rotateY(1deg) translateZ(3px);
+    }
+}
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px); /* Start off the screen to the right */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End at the original position */
+    }
+}
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

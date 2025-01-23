@@ -1,0 +1,191 @@
+.hdlne {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    padding-left: 50px;
+    padding-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    flex-direction: column;
+}
+.prehdline {
+    color: #043D5D;
+    text-decoration: underline 2px;
+    text-decoration-thickness: 1px;
+    font-size: 16px;
+    font-weight: 500;
+    text-underline-offset: 8px;
+    
+    
+    
+}
+.hdlneog {
+    background: linear-gradient(5deg, red, #043D5D, white );
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 55px;
+    font-weight: 490;
+    overflow: hidden;
+}
+.course-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    gap: 15px;
+    
+}
+.in-detail {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.in-detail:hover {
+    transform: scale(1.1);
+}
+.in-detail::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(4deg, rgb(228, 66, 12), #043D5D);
+    opacity: 0.1;
+    z-index: -1;
+    transform: rotate(4deg);
+}
+.course-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #043D5D;
+}
+
+.course-content {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.course-button {
+    background-color: #043D5D;
+    text-decoration: nonr;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.course-button:hover {
+    background-color: #05537A;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-play-state: paused;
+}
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100%); /* Start from the left */
+    animation: slideInLeft 1.5s ease-out forwards;
+    animation-play-state: paused;
+}
+.slide-in-right {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%); /* Start off-screen */
+    animation: slideInRight 1.5s ease-out forwards; /* Smooth slide-in effect */
+    animation-play-state: paused; /* Paused until triggered by JS */
+}
+.slide-from-bottom {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(100%); /* Start position below */
+    animation: slideFromBottom 1s ease-out forwards; /* Smooth slide and fade-in effect */
+    animation-play-state: paused; /* Paused until triggered by JavaScript */
+}
+.scale-up {
+    opacity: 0;
+    transform: scale(5px); /* Start smaller */
+    animation: scaleUp 1.5s ease-out forwards;
+    animation-play-state: paused;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideFromBottom {
+    from {
+        opacity: 0;            /* Fully transparent */
+        transform: translateY(100%); /* Start below the final position */
+    }
+    to {
+        opacity: 1;            /* Fully visible */
+        transform: translateY(0); /* Original position */
+    }
+}
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(10%); /* Start off the screen to the right */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End at the original position */
+    }
+}
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@media (max-width: 768px) {
+    .hdlne {
+        flex-direction: row;
+        padding: 10px;
+    }
+    .prehdline {
+        display: inline-flex;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .hdlneog {
+        font-size: 55px;
+        font-weight: 490;
+        text-decoration: underline 2px;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 8px;
+        overflow: hidden;
+    }
+}
+

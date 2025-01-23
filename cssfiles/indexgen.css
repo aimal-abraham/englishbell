@@ -1,0 +1,403 @@
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Header Section */
+header {
+    display: flex;
+    background-color: white;
+    height: 100px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px;
+}
+.section1 {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+.logo {
+    width: 120px;
+    height: auto;
+    transform: translateX(-30px);
+    animation: slideInLeft 1s ease-out forwards;
+
+}
+.section2 {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.socialicon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    fill: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 3px;
+}
+.headder-socialicon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    fill: rgb(113, 117, 128);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 3px; 
+}
+.headder-socialicon:hover {
+    background-color: #043D5D;
+    fill: white;
+    
+}
+.socialicon:hover {
+    background-color: #043D5D;
+    fill: white;
+    
+}
+.section3 {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+}
+.abparahd {
+    font-size: 35px;
+    font-weight: 700;
+    background: linear-gradient(45deg, red, #043D5D, #A53814); 
+    -webkit-background-clip: text; 
+    color: transparent; 
+    
+}
+ .firstcolumn {
+    display: flex;
+    align-items: center;
+}
+ .secondcolumn {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    align-items: center;
+    gap: 5px;
+}
+.firstline {
+    font-size: 12px;
+    color: rgb(113, 117, 128);
+    font-weight: 700;
+    cursor: pointer;
+}
+.firstline:hover {
+    color: #043D5D;
+    text-decoration: underline;
+}
+/* Navigation Bar */
+nav {
+    display: flex;
+    position: sticky;
+    top: -1px;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    gap: 15px;
+    border-top: 0.2px solid rgb(167, 169, 176);
+    padding: 0 20px;
+    background-color: white;
+}
+.navbarlogo {
+    width: 100px;
+    height: auto;
+}
+.navinglinks {
+    display: flex;
+    background-color: white;
+    gap: 25px;
+}
+.navigation-links {
+    
+    font-size: 10px;
+    color: black;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+.navigation-links:hover {
+    color: #043D5D;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.hamburger div {
+    width: 29px;
+    height: 5px;
+    background-color: #043D5D;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.fixed-buttons {
+    position: fixed; /* Makes the buttons fixed on the screen */
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 15px; /* Distance from the right edge of the screen */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+    z-index: 1000; /* Ensures the buttons appear above other elements */
+}
+.fixed-buttons a svg {
+    width: 18px; /* Icon size */
+    height: 18px;
+    background-color: rgb(9, 135, 9);
+    border-radius: 50%; /* Makes the icons circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+    cursor: pointer;
+    padding: 6px;
+    transition: transform 0.3s ease; /* Smooth hover animation */
+}
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff; /* Background color of the preloader */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it appears on top */
+}
+/* Image Animation */
+.image-container img {
+    width: 125px; /* Adjust the size of the image */
+    height: auto;
+    opacity: 0; /* Initially invisible */
+    transform: scale(0.8); /* Initial scale */
+    animation: slideFromBottom 2s ease-in-out forwards; /* Apply animation */
+}
+/* Text Animation */
+.text-container {
+    margin-top: -15px; /* Space between the image and text */
+    font-size: 18px; /* Text size */
+    font-weight: 700; /* Bold text */
+    background: linear-gradient(1deg, red, #043D5D, #043D5D, red); /* Text color */
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0; /* Initially invisible */
+    transform: translateY(20px); /* Initial position (slightly below) */
+    animation: slideFromBottom 2.5s ease-in-out 1s forwards; /* Delayed animation */
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-play-state: paused;
+}
+.fade-in-scale {
+    opacity: 0; /* Initially hidden */
+    transform: scale(5px); /* Initially smaller */
+    animation: fadeInScale 1.5s ease-out forwards; /* Smooth fade-in and scale effect */
+    animation-play-state: paused; /* Paused until triggered by JS */
+}
+.scale-up {
+    opacity: 0;
+    transform: scale(5px); /* Start smaller */
+    animation: scaleUp 1.5s ease-out forwards;
+    animation-play-state: paused;
+}
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100%); /* Start from the left */
+    animation: slideInLeft 1.5s ease-out forwards;
+    animation-play-state: paused;
+}
+.slide-in-right {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%); /* Start off-screen */
+    animation: slideInRight 1.5s ease-out forwards; /* Smooth slide-in effect */
+    animation-play-state: paused; /* Paused until triggered by JS */
+}
+.fade-in-up {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(10px); /* Start below the final position */
+    animation: fadeInUp 1.5s ease-out forwards; /* Smooth fade-in and slide-up effect */
+    animation-play-state: paused; /* Paused until triggered */
+}
+.slide-from-bottom {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(100%); /* Start position below */
+    animation: slideFromBottom 1s ease-out forwards; /* Smooth slide and fade-in effect */
+    animation-play-state: paused; /* Paused until triggered by JavaScript */
+}
+/* Smooth fade-in and scale-up animation for the image */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Smooth fade-in and slide-up animation for the text */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px); /* Start off the screen to the right */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End at the original position */
+    }
+}
+@keyframes slideFromBottom {
+    from {
+        opacity: 0;            /* Fully transparent */
+        transform: translateY(100%); /* Start below the final position */
+    }
+    to {
+        opacity: 1;            /* Fully visible */
+        transform: translateY(0); /* Original position */
+    }
+}
+#main-content {
+    display: none;
+}
+/* Mobile Styles */
+@media (max-width: 600px) {
+    #headerbar {
+        display: none;
+    }
+
+    .navbarlogo {
+        display: block;
+        width: 150px;
+        height: auto;
+    }
+
+    .navinglinks {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background-color: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        z-index: 1000;
+        border-radius: 5px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .navinglinks.active {
+        display: flex;
+        width: 100px;
+        align-items: center;
+    }
+    nav {
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+    }
+    .logo {
+        width: 500px;
+        height: auto;
+    }
+    .abparahd {
+        font-size: 30px;
+        font-weight: 700;
+        background: linear-gradient(185deg, red, #043D5D); 
+        -webkit-background-clip: text; 
+        color: transparent; 
+     
+    }
+    .specialheadline {
+        font-size: 39px;
+        animation-name: slideInLeft;
+    }
+
+}
+@media (min-width: 601px) {
+    #headerbar {
+        display: flex;
+    }
+
+    .navbarlogo {
+        display: none;
+    }
+
+    .navinglinks {
+        display: flex;
+        
+    }
+   
+}

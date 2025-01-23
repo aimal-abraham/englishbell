@@ -1,0 +1,349 @@
+.aboutt {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    flex: 1;
+}
+.abouttone {
+    display: flex;
+    max-width: 400px;
+} 
+.abpara {
+    font-size: 13px;
+    font-weight: 450;
+    color: black;
+    line-height: 1.6;
+
+}
+.special {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    height: 440px;
+    padding: 50px;
+}
+.spclhed {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+.keys{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 250px;
+    background-color: rgb(228, 226, 226);
+    border-radius: 5%;
+    padding: 12px;
+}
+.explanation {
+    display: flex;
+    margin-top: -15px;
+}
+.keysfirst {
+    display: flex;
+    flex-direction: row;
+    
+}
+.hashiconspace {
+    display: flex;
+    align-items: center;
+    fill: #043D5D;
+    stroke-width: 20px;
+}
+.testtingg {
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    justify-content: space-between;
+}
+.testtinggtwo {
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    justify-content: space-between;
+    margin-top: 13px;
+}
+.insidee {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    margin: 0;
+    background-color: #f9f9f9;
+    padding: 25px;
+  }
+.carousel-container {
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.review {
+    flex: 0 0 33.33%; /* Show 3 reviews at a time */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: left;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.review:last-child {
+    border-right: none;
+}
+
+.review-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #eeeeee;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.row:last-child {
+    margin-bottom: 0;
+}
+
+.row-1 {
+    justify-content: space-between;
+}
+
+.dpp {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ccc;
+    margin-right: 10px;
+}
+
+.reviewer-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg') no-repeat center;
+    background-size: contain;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: rgb(255, 166, 0);
+}
+
+.comment {
+font-size: 14px;
+color: #333;
+max-height: 60px;
+overflow-y: auto;
+text-align: justify;
+}
+
+.nav-buttons {
+position: absolute;
+top: 50%;
+width: 100%;
+display: flex;
+justify-content: space-between;
+transform: translateY(-50%);
+}
+
+.nav-buttons button {
+background-color: rgba(159, 157, 157, 0.5);
+border: none;
+color: white;
+padding: 10px;
+cursor: pointer;
+}
+
+.nav-buttons button:hover {
+background-color: rgba(130, 126, 126, 0.7);
+}
+.review-hdline {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 80px;
+}
+.review-hdline-firstrow{
+display: flex;
+font-size: 25px;
+font-weight: 580;
+background: linear-gradient(45deg, red, rgb(179, 99, 7), green);
+-webkit-background-clip: text;
+color: transparent;
+align-items: center;
+justify-content: center;
+}
+.review-hdline-secondrow {
+display: flex;
+flex-direction: row;
+gap: 10px ;
+font-size: 35px;
+font-weight: 500
+}
+.glogo {
+width: 20px;
+height: 20px;
+}
+.hurry {
+    display: flex;
+    height: 280px;
+    flex-direction: row;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.hurryimg {
+    display: flex;
+}
+.hurry-second-column {
+    display: flex;
+    flex-direction: column;
+}
+.hurrybutton {
+    display: ;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+.hurrybuttonwhats {
+    background-color: #25D366;
+    color: white; 
+    border: none; 
+    padding: 10px 10px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    border-radius: 25px; /* Curved border */ 
+    cursor: pointer;
+}
+.emcp {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px black;
+    border-radius: 10px;
+    margin: 15px;
+}
+.emcpbutton {
+    display: inline-flex;
+    background-color: #269a12;
+    border-radius: 50px;
+    height: 30px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.fade-in-scale {
+    opacity: 0; /* Initially hidden */
+    transform: scale(5px); /* Initially smaller */
+    animation: fadeInScale 1.5s ease-out forwards; /* Smooth fade-in and scale effect */
+    animation-play-state: paused; /* Paused until triggered by JS */
+}
+.slide-from-bottom {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(100%); /* Start position below */
+    animation: slideFromBottom 1s ease-out forwards; /* Smooth slide and fade-in effect */
+    animation-play-state: paused; /* Paused until triggered by JavaScript */
+}
+@media (max-width: 768px) {
+    .review-hdline-firstrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        font-weight: 600;
+        padding: 13px;
+    }
+    .stars {
+        display: flex;
+        align-items: center;
+    }
+    .nav-buttons {
+        display: none;
+    }
+    .carousel-container {
+        width: 90%; /* Make the carousel fit smaller screens */
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .review {
+        flex: 0 0 100%; /* Show only one review at a time */
+    }
+
+    .comment {
+        font-size: 12px; /* Adjust text size for better readability */
+    }
+
+    .row {
+        flex-wrap: wrap; /* Adjust row layout for small screens */
+    }
+
+    .dpp {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-buttons button {
+        padding: 8px;
+    }
+}
+@keyframes slideFromBottom {
+    from {
+        opacity: 0;            /* Fully transparent */
+        transform: translateY(100%); /* Start below the final position */
+    }
+    to {
+        opacity: 1;            /* Fully visible */
+        transform: translateY(0); /* Original position */
+    }
+}
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
